@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="8dp"
+    tools:context="com.example.android.cognitiveservices.MainActivity">
+
+    <Button
+        android:id="@+id/button1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Start"
+        android:layout_alignParentTop="true"/>
+    <Button
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Select Mode"
+        android:id="@+id/buttonSelectMode"
+        android:layout_alignParentRight="true"/>
+    <RadioGroup
+        android:id="@+id/groupMode"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_below="@+id/editText1">
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Use microphone with ShortPhrase mode"
+            android:id="@+id/radioButton"/>
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Use microphone with LongDictation mode"
+            android:id="@+id/micDictationRadioButton"/>
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Use microphone and intent detection"
+            android:id="@+id/micIntentRadioButton"/>
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Use wav file for ShortPhrase mode"
+            android:id="@+id/dataShortRadioButton"/>
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Use wav file for LongDictation mode"
+            android:id="@+id/dataLongRadioButton"/>
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Use wav file and intent detection"
+            android:id="@+id/dataShortIntentRadioButton"/>
+    </RadioGroup>
+
+    <EditText
+        android:id="@+id/editText1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/button1"
+        android:ems="10"
+        android:inputType="textMultiLine|textNoSuggestions"
+        android:textSize="15dp"/>
+
+</RelativeLayout>
